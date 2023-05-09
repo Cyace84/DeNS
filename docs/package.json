@@ -1,0 +1,23 @@
+{
+  "name": "docs",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vue-tsc && vitepress build"
+  },
+  "dependencies": {
+    "vue": "^3.2.47",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "@vitejs/plugin-vue": "^4.2.1",
+    "vite-plugin-externals": "^0.6.2",
+    "vite-plugin-node-externals": "^0.0.1",
+    "vite-plugin-resolve-extension-vue": "^0.1.0",
+    "vitepress": "1.0.0-alpha.74",
+    "vue": "^3.2.47",
+    "vitepress-plugin-search": "1.0.4-alpha.20"
+  }
+}

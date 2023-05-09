@@ -1,32 +1,38 @@
 {
-    "name": "dens",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "build": "npx locklift build",
-        "deploy-prod": "npx locklift run --network mainnet --script scripts/migration/prod.ts --disable-build",
-        "deploy-test": "npx locklift run --network mainnet --script scripts/migration/test.ts --disable-build",
-        "test": "npx locklift test --network local --disable-build"
-    },
-    "author": "TONRED",
-    "license": "ISC",
-    "dependencies": {
-        "bignumber.js": "^9.0.1",
-        "directory-tree": "^3.0.1",
-        "dotenv": "^10.0.0",
-        "folder-hash": "^4.0.1",
-        "mocha": "^10.0.0",
-        "mocha-logger": "^1.0.8",
-        "tip3": "git://github.com/broxus/tip3#6503e61880c03fb45741c177c25f4955dca5f0df",
-        "tip4": "git://github.com/tonred/TIP4#ac85142007ed63849e7f52a239d9de83d0f0a042",
-        "versionable": "git://github.com/tonred/Versionable#337c199a135805b1d3fc351c78f07f998a262f6e"
-    },
-    "devDependencies": {
-        "@broxus/contracts": "^1.0.3",
-        "@types/mocha": "^9.1.1",
-        "chai": "^4.3.6",
-        "chai-bignumber": "^3.0.0",
-        "locklift": "^2.4.3"
-    }
+  "name": "dens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx locklift build",
+    "deploy-prod": "npx locklift run --network mainnet --script scripts/migration/prod.ts --disable-build",
+    "deploy-test": "npx locklift run --network mainnet --script scripts/migration/test.ts --disable-build",
+    "test": "npx locklift test --network local --disable-build"
+  },
+  "author": "TONRED",
+  "license": "ISC",
+  "dependencies": {
+    "bignumber.js": "^9.0.1",
+    "directory-tree": "^3.0.1",
+    "dotenv": "^10.0.0",
+    "folder-hash": "^4.0.1",
+    "mocha": "^10.0.0",
+    "mocha-logger": "^1.0.8",
+    "tip3": "git://github.com/broxus/tip3#6503e61880c03fb45741c177c25f4955dca5f0df",
+    "tip4": "git://github.com/tonred/TIP4#ac85142007ed63849e7f52a239d9de83d0f0a042",
+    "versionable": "git://github.com/tonred/Versionable#337c199a135805b1d3fc351c78f07f998a262f6e"
+  },
+  "devDependencies": {
+    "@broxus/contracts": "^1.0.3",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "chai-bignumber": "^3.0.0",
+    "locklift": "^2.4.3",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.5",
+    "@vitejs/plugin-vue": "^4.2.1",
+    "vue": "^3.2.47",
+    "tsolidity-docgen": "../tsolidity-docgen",
+    "solidity-ast": "^0.4.40"
+  }
 }
