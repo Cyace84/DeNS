@@ -55,12 +55,6 @@
   background: transparent;
 }
 
-.demo input:not([type]):focus,
-.demo textarea:focus,
-.demo select:focus {
-  outline: 1px solid blue;
-}
-
 .demo select {
   -webkit-appearance: listbox;
 }
@@ -89,4 +83,14 @@
 .toggle-layout-button {
   display: none;
   cursor: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 1px solid var(--vp-c-brand) !important;
+}
+
+input {
+  font-size: 16px;
 }

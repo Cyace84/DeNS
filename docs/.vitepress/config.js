@@ -1,7 +1,7 @@
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 //import typescript from "@rollup/plugin-typescript";
-
+import Components from "unplugin-vue-components/vite";
 import nodeExternals from "vite-plugin-node-externals";
 
 import dotenv from "dotenv";
@@ -32,9 +32,9 @@ var options = {
 };
 
 module.exports = {
-  title: "DeNs",
+  title: "DeNS Documentation",
   base: "",
-  description: "",
+  description: "Decentralized Name Service",
   // head: [
   //   [
   //     'script',
@@ -51,6 +51,7 @@ module.exports = {
   // ],
   plugins: [
     vue(),
+    Components({ dst: true }),
     // typescript(),
 
     nodeExternals({
@@ -70,11 +71,18 @@ module.exports = {
       { text: "Architecture", link: "/src/pages/architecture" },
       { text: "Smart Contracts", link: "/src/pages/contracts" },
       { text: "Interfaces", link: "/src/pages/interfaces" },
-      // {
-      //   text: "Guide",
-      //   collapsable: false,
-      //   items: [{ text: "Introduction", link: "/src/pages/2-Introduction" }],
-      // },
+      {
+        text: "Guide",
+        collapsable: false,
+        items: [
+          //{ text: "Introduction", link: "/src/pages/guides/index" },
+          { text: "Working with DeNS", link: "/src/pages/guides/working_with_dens" },
+          { text: "Resolving names", link: "/src/pages/guides/resolving_names" },
+          { text: "Domain registration", link: "/src/pages/guides/domain_registration" },
+          { text: "Subdomain registration", link: "/src/pages/guides/subdomain_registration" },
+          //{ text: "Associating domain with address", link: "/src/pages/guides/associating_address_with_domain" },
+        ],
+      },
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/tonred/DeNS" }],
