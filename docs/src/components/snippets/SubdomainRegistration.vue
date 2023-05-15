@@ -49,7 +49,7 @@ export default defineComponent({
       const rootContract = new provider.Contract(ROOT_ABI, ROOT_ADDRESS);
 
       const certificateAddr = await rootContract.methods
-        .resolve({ path: domainName, answerId: 42 })
+        .resolve({ path: domainName + ".ever", answerId: 42 })
         .call({ responsible: true });
 
       this.domainAddress = certificateAddr.certificate.toString();
@@ -73,7 +73,7 @@ export default defineComponent({
         })
         .send({
           from: senderAddress!,
-          amount: "3e9",
+          amount: String(3e9),
           bounce: true,
         });
 

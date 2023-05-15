@@ -1,8 +1,8 @@
 <template>
   <div class="demo">
-    <div>
+    <div class="input-group">
       <label for="domainToResolve">Domain to resolve:</label>
-      <input id="domainToResolve" type="text" v-model="domainToResolve" />
+      <EdInput v-model="domainToResolve" @input="resolveDomain" />
     </div>
     <button @click="resolveDomain">Resolve Domain</button>
     <pre v-if="resolveResult">Domain Address: {{ resolveResult }}</pre>
@@ -13,18 +13,22 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { Address, ProviderRpcClient } from "everscale-inpage-provider";
+import { ProviderRpcClient } from "everscale-inpage-provider";
 import { ROOT_ABI, ROOT_ADDRESS, DOMAIN_ABI } from "./../../helpers";
+import EdInput from "../shared/EdInput.vue";
 
 export default defineComponent({
   name: "DnsResolver",
   setup() {
-    const domainToResolve = ref("username.ever");
+    const domainToResolve = ref("username");
     const targetAddress = ref("");
     const resolveResult = ref("");
     const error = ref("");
 
     return { domainToResolve, targetAddress, resolveResult, error };
+  },
+  components: {
+    EdInput,
   },
   methods: {
     async resolveDomain() {
@@ -34,7 +38,7 @@ export default defineComponent({
       const rootContract = new provider.Contract(ROOT_ABI, ROOT_ADDRESS);
 
       const certificateAddr = await rootContract.methods
-        .resolve({ path: this.domainToResolve, answerId: 42 })
+        .resolve({ path: this.domainToResolve + ".ever", answerId: 42 })
         .call({ responsible: true });
 
       this.resolveResult = JSON.stringify(certificateAddr?.certificate, null, 2);
@@ -44,6 +48,7 @@ export default defineComponent({
       let result;
       try {
         result = await domainContract.methods.query({ key: 0, answerId: 1337 }).call({ responsible: true });
+        this.error = "";
       } catch (e) {
         this.resolveResult = "";
         this.targetAddress = "";
@@ -70,5 +75,9 @@ export default defineComponent({
 <style scoped>
 .dns-resolver {
   margin-bottom: 1rem;
+}
+.input-group {
+  position: relative;
+  display: flex;
 }
 </style>

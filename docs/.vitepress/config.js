@@ -58,6 +58,7 @@ module.exports = {
       allowList: ["vue"],
     }),
   ],
+  //theme: require("./theme"),
   themeConfig: {
     search: {
       provider: "local",
@@ -80,6 +81,10 @@ module.exports = {
           { text: "Resolving names", link: "/src/pages/guides/resolving_names" },
           { text: "Domain registration", link: "/src/pages/guides/domain_registration" },
           { text: "Subdomain registration", link: "/src/pages/guides/subdomain_registration" },
+          {
+            text: "Changing Domain/Subdomain Ownership and Management",
+            link: "/src/pages/guides/transfer_ownership",
+          },
           //{ text: "Associating domain with address", link: "/src/pages/guides/associating_address_with_domain" },
         ],
       },

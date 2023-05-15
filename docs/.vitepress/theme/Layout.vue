@@ -1,21 +1,14 @@
-<template>
-  <div>
-    <header>
-      <SearchBox />
-    </header>
-    <main>
-      <slot />
-    </main>
-    <footer></footer>
-  </div>
-</template>
+<script setup>
+import DefaultTheme from "vitepress/theme";
+import WalletControl from "./../../src/components/WalletControl.vue";
 
-<script>
-import { SearchPlugin as SearchBox } from "vitepress-plugin-search";
-
-export default {
-  components: {
-    SearchBox,
-  },
-};
+const { Layout } = DefaultTheme;
 </script>
+
+<template>
+  <Layout>
+    <template #nav-bar-content-after
+      ><Suspense><WalletControl /></Suspense
+    ></template>
+  </Layout>
+</template>

@@ -42,15 +42,15 @@ export default defineComponent({
       const rootContract = new provider.Contract(ROOT_ABI, ROOT_ADDRESS);
 
       const certificateAddr = await rootContract.methods
-        .resolve({ path: this.domainName, answerId: 42 })
+        .resolve({ path: this.domainName + ".ever", answerId: 42 })
         .call({ responsible: true });
 
       const domainContract = new provider.Contract(DOMAIN_ABI, certificateAddr.certificate);
-
-      await provider.sendMessage({
+      console.log(certificateAddr.certificate.toString());
+      const setTargetTransaction = await provider.sendMessage({
         sender: senderAddress,
-        recipient: domainContract.address,
-        amount: "1e9",
+        recipient: certificateAddr.certificate,
+        amount: String(1e9),
         bounce: true,
         payload: {
           abi: JSON.stringify(DOMAIN_ABI),
@@ -62,9 +62,9 @@ export default defineComponent({
       });
       // const setTargetTransaction = await domainContract.methods
       //   .setTarget({ target: new Address(this.targetAddress) })
-      //   .send({ from: senderAddress, amount: "1e9", bounce: true });
+      //   .send({ from: senderAddress, amount: String(1e9), bounce: true });
 
-      //this.transactionResult = JSON.stringify(setTargetTransaction, null, 2);
+      this.transactionResult = JSON.stringify(setTargetTransaction, null, 2);
     },
   },
 });

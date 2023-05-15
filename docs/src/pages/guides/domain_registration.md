@@ -72,7 +72,7 @@ const transaction = await tokenWallet.methods
   })
   .send({
     from: senderAddress!,
-    amount: "3e9",
+    amount: String(3e9),
     bounce: true,
   });
 ```
@@ -98,7 +98,7 @@ const domainContract = new provider.Contract(DOMAIN_ABI, domainAddress);
 
 const setTargetTransaction = await domainContract.methods
   .setTarget({ target: yourAddress })
-  .send({ from: yourAddress, amount: "1e9", bounce: true });
+  .send({ from: yourAddress, amount: String(1e9), bounce: true });
 ```
 
 <SetTarget />
