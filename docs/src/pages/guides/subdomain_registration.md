@@ -19,7 +19,7 @@ const createSubdomainTransaction = await domainContract.methods
     owner: yourAddress,
     renewable: true,
   })
-  .send({ from: yourAddress, amount: "1e9", bounce: true });
+  .send({ from: yourAddress, amount: String(1e9), bounce: true });
 ```
 
 <SubdomainRegistration />
@@ -42,7 +42,7 @@ const subdomainContract = new provider.Contract(SUBDOMAIN_ABI, subdomainAddress)
 
 const setTargetTransaction = await subdomainContract.methods
   .setTarget({ target: yourAddress })
-  .send({ from: yourAddress, amount: "1e9", bounce: true });
+  .send({ from: yourAddress, amount: String(1e9), bounce: true });
 ```
 
 <SetTarget />

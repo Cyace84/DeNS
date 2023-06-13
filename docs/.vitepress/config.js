@@ -88,6 +88,8 @@ module.exports = {
           //{ text: "Associating domain with address", link: "/src/pages/guides/associating_address_with_domain" },
         ],
       },
+
+      { text: "Future Updates", link: "/src/pages/future-updates" },
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/tonred/DeNS" }],
