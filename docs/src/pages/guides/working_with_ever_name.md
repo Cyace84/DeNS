@@ -1,6 +1,6 @@
-# Working with DeNS
+# Working with Ever Name
 
-Before you can begin interacting with DeNS, you will need to obtain a reference to the DeNS registry. This guide provides example code for using the TypeScript-based API with the [everscale-inpage-provider](https://www.npmjs.com/package/everscale-inpage-provider).
+Before you can begin interacting with Ever Name, you will need to obtain a reference to the Ever Name registry. This guide provides example code for using the TypeScript-based API with the [everscale-inpage-provider](https://www.npmjs.com/package/everscale-inpage-provider).
 
 ::: info
 The example code provided below assumes that it is being run inside a DApp browser, such as Chrome with the [Ever Wallet](https://everwallet.net) extension installed, which exposes the `provider` object.
@@ -14,7 +14,7 @@ First, make sure to install the `everscale-inpage-provider` package:
 npm install everscale-inpage-provider
 ```
 
-Then, you can set up the `provider` and obtain a reference to the DeNS registry:
+Then, you can set up the `provider` and obtain a reference to the Ever Name registry:
 
 ```javascript
 import { ProviderRpcClient } from "everscale-inpage-provider";
@@ -32,6 +32,6 @@ await provider.requestPermissions({ permissions: ["basic", "accountInteraction"]
 const tld = "ever";
 const rootContractAddress = "0:a7d0694c025b61e1a4a846f1cf88980a5df8adf737d17ac58e35bf172c9fca29";
 
-// Initialize the DeNS root contract
+// Initialize the Ever Name root contract
 const rootContract = new provider.Contract(rootContractAddress, RootABI);
 ```

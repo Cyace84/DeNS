@@ -4,11 +4,11 @@ outline: deep
 
 ## Architecture
 
-The DeNS system is composed of three primary components: the registry, resolvers, and auction interfaces. This section provides an overview of each component and the methods they support.
+The Ever Name system is composed of three primary components: the registry, resolvers, and auction interfaces. This section provides an overview of each component and the methods they support.
 
 ### 1. Registry: Root Contract
 
-The DeNS registry is managed by a single smart contract, `Root`, which keeps track of all top-level domains (TLDs). The `Root` contract handles the following tasks:
+The Ever Name registry is managed by a single smart contract, `Root`, which keeps track of all top-level domains (TLDs). The `Root` contract handles the following tasks:
 
 - Deploying new domain and subdomain certificates
 - Managing the root domain
@@ -27,7 +27,7 @@ Additionally, the `Root` contract supports all TIP-4 collection methods.
 
 ### 2. Domain and Subdomain Interfaces
 
-Domains within DeNS are managed through various interfaces and smart contracts, such as `Domain` and `Subdomain`.
+Domains within Ever Name are managed through various interfaces and smart contracts, such as `Domain` and `Subdomain`.
 
 #### 2.1. Domain Smart Contract
 
@@ -51,4 +51,4 @@ In addition, the `Subdomain` contract supports all TIP-4 token (NFT) methods.
 
 ### 3. Auction Interfaces
 
-The auction interfaces, although not detailed here, play a crucial role in the process of acquiring new domains within the DeNS system.
+The auction interfaces, although not detailed here, play a crucial role in the process of acquiring new domains within the Ever Name system.

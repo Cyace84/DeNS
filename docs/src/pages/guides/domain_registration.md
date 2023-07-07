@@ -25,10 +25,10 @@ After a user acquires a domain with 11 or fewer characters, other users have a w
 
 The cost of renewing a domain is equal to the initial registration cost.
 
-Registering a new domain in the DeNS system is a straightforward process.
+Registering a new domain in the Ever Name system is a straightforward process.
 
 ::: info
-It's important to note that these rules and costs are specific to the Everscale blockchain, where WEVER, wrapped native coin a [TIP3 standard token](https://docs.everscale.network/standard/TIP-3), is used. If you deploy DeNS contracts on another TVM blockchain, the settings, including the registration and auction prices, might be different and are configurable based on your requirements. Always ensure you're familiar with the specific configurations of the blockchain you're using.
+It's important to note that these rules and costs are specific to the Everscale blockchain, where WEVER, wrapped native coin a [TIP3 standard token](https://docs.everscale.network/standard/TIP-3), is used. If you deploy Ever Name contracts on another TVM blockchain, the settings, including the registration and auction prices, might be different and are configurable based on your requirements. Always ensure you're familiar with the specific configurations of the blockchain you're using.
 :::
 
 ## Register a new domain

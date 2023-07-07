@@ -1,8 +1,8 @@
 # Changing Ownership of a Domain or Subdomain
 
-## Overview of Roles in DeNS
+## Overview of Roles in Ever Name
 
-In DeNS, each Non-Fungible Token (NFT) representing a domain or subdomain contains two key roles:
+In Ever Name, each Non-Fungible Token (NFT) representing a domain or subdomain contains two key roles:
 
 1. **Owner**: This address owns the NFT. The owner can visualize the NFT in wallets, marketplaces, and applications. The NFT can also be used by the owner for authorization, proof in games, and other functionalities.
 

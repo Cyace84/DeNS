@@ -4,7 +4,7 @@ outline: deep
 
 ## Interfaces
 
-Implementing the following interfaces ensures that the corresponding smart contracts comply with the DeNS system's requirements and standardize their core features:
+Implementing the following interfaces ensures that the corresponding smart contracts comply with the Ever Name system's requirements and standardize their core features:
 
 ### IRoot
 
@@ -16,8 +16,8 @@ The `IDomain` interface outlines the essential functionalities required for the 
 
 ### ISubdomain
 
-The `ISubdomain` interface defines the core methods and functionalities for subdomain management within the DeNS system. Implemented by the `Subdomain` smart contract, the interface provides a standardized set of methods for interacting with and managing subdomain instances. Key methods include those for retrying subdomain deployment, obtaining duration configuration, and handling subdomain renewal and destruction.
+The `ISubdomain` interface defines the core methods and functionalities for subdomain management within the Ever Name system. Implemented by the `Subdomain` smart contract, the interface provides a standardized set of methods for interacting with and managing subdomain instances. Key methods include those for retrying subdomain deployment, obtaining duration configuration, and handling subdomain renewal and destruction.
 
 ### ICertificate
 
-The `ICertificate` interface defines the core methods and functionalities for certificate management within the DeNS system. Implemented by the `Domain` and `Subdomain` smart contracts, the interface provides a standardized set of methods for interacting with and managing certificates.
+The `ICertificate` interface defines the core methods and functionalities for certificate management within the Ever Name system. Implemented by the `Domain` and `Subdomain` smart contracts, the interface provides a standardized set of methods for interacting with and managing certificates.

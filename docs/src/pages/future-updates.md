@@ -4,7 +4,7 @@ outline: deep
 
 # Future Updates
 
-In this section, we'll discuss the forthcoming enhancements and development roadmap for the DeNS system.
+In this section, we'll discuss the forthcoming enhancements and development roadmap for the Ever Name system.
 
 ::: warning Note
 The following sections are currently under development and are not yet available on GitHub.

@@ -2,7 +2,7 @@
 
 ## Get a dns record for a specific domain
 
-Now that you have a reference to the DeNS registry, you can resolve domain names and obtain DNS records:
+Now that you have a reference to the Ever Name registry, you can resolve domain names and obtain DNS records:
 
 ```javascript
 // Define the domain name to resolve
